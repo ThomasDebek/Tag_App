@@ -8,7 +8,7 @@
 /.bundle
 .idea
 .DS_Store
-.vendor
+/vendor
 
 
 # Ignore all environment files.
