@@ -1,2 +1,3 @@
-class Post < ApplicationRecord
+ class Post < ApplicationRecord
+   serialize :tags, coder: JSON, type: Array
 end
