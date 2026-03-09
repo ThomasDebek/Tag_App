@@ -1,3 +1,9 @@
+<%= content_for  :head do %>
+  <link href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
+<% end %>
+
+
+
 <%= form_with(model: post) do |form| %>
   <% if post.errors.any? %>
     <div style="color: red">
@@ -23,7 +29,7 @@
 
   <div>
     <%= form.label :tags, style: "display: block" %>
-    <%= form.textarea :tags %>
+    <%= form.text_field :tags %>
   </div>
 
   <div>
