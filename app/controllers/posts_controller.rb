@@ -65,6 +65,7 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.expect(post: [ :caption, :body, :tags ])
+      params[:post][:tags] = params[:post][:tags].split(",")
+      params.expect(post: [ :caption, :body, tags: ])
     end
 end
